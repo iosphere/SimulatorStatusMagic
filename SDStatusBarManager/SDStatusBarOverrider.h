@@ -11,6 +11,8 @@
 @protocol SDStatusBarOverrider <NSObject>
 
 @property (copy, nonatomic) NSString *timeString;
+/// displayed instead of signal strength when offline mode is active
+@property (copy, nonatomic) NSString *offlineString;
 
 @property (assign, nonatomic) BOOL bluetoothEnabled;
 @property (assign, nonatomic) BOOL bluetoothConnected;

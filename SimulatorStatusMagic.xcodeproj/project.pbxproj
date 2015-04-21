@@ -23,6 +23,8 @@
 		110F24E319E45FFE00012FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		110F24E419E45FFE00012FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		110F24E619E4610E00012FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1BFB7F301AE6946400E80A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1BFB7F311AE694AB00E80A60 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		44A44BDC1AD7316A003E04A5 /* SDStatusBarOverriderPost8_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatusBarOverriderPost8_3.h; sourceTree = "<group>"; };
 		44A44BDD1AD7316A003E04A5 /* SDStatusBarOverriderPost8_3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatusBarOverriderPost8_3.m; sourceTree = "<group>"; };
 		44A44BDF1AD734F0003E04A5 /* SDStatusBarOverrider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatusBarOverrider.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				en,
 				Base,
 				de,
+				es,
 			);
 			mainGroup = 5516355F19E3FF3D001F636D;
 			productRefGroup = 5516356919E3FF3D001F636D /* Products */;
@@ -207,6 +210,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				110F24E619E4610E00012FD7 /* de */,
+				1BFB7F301AE6946400E80A60 /* en */,
+				1BFB7F311AE694AB00E80A60 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

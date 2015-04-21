@@ -45,6 +45,7 @@ static NSString * const SDStatusBarManagerOfflineStateKey = @"offline_state";
   self.overrider.timeString = [self localizedTimeString];
   self.overrider.bluetoothEnabled = self.bluetoothState != SDStatusBarManagerBluetoothHidden;
   self.overrider.bluetoothConnected = self.bluetoothState == SDStatusBarManagerBluetoothVisibleConnected;
+  self.overrider.offlineString = self.isOffline ? NSLocalizedString(@"No Service", @"No cellular network") : @"";
 
   [self.overrider enableOverrides];
 }

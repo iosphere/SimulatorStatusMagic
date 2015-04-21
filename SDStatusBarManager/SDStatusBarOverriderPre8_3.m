@@ -103,6 +103,7 @@ typedef struct {
 @synthesize timeString;
 @synthesize bluetoothConnected;
 @synthesize bluetoothEnabled;
+@synthesize offlineString;
 
 - (void)enableOverrides
 {
@@ -113,15 +114,19 @@ typedef struct {
   strcpy(overrides->values.timeString, [self.timeString cStringUsingEncoding:NSUTF8StringEncoding]);
   
   // Enable 5 bars of mobile (iPhone only)
+  NSString *carrierText;
   if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-    overrides->booloverrideItemIsEnabled[3] = 1;
-    overrides->values.boolitemIsEnabled[3] = 1;
-    overrides->overrideGsmSignalStrengthBars = 1;
-    overrides->values.gsmSignalStrengthBars = 5;
+    if (!self.offlineString.length) {
+      overrides->booloverrideItemIsEnabled[3] = 1;
+      overrides->values.boolitemIsEnabled[3] = 1;
+      overrides->overrideGsmSignalStrengthBars = 1;
+      overrides->values.gsmSignalStrengthBars = 5;
+    }
+    carrierText = self.offlineString;
+  } else {
+    carrierText = @"iPad";
   }
   
-  // Remove carrier text for iPhone, set it to "iPad" for the iPad
-  NSString *carrierText = ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) ? @"" : @"iPad";
   overrides->overrideServiceString = 1;
   strcpy(overrides->values.serviceString, [carrierText cStringUsingEncoding:NSUTF8StringEncoding]);
   
