@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -47,19 +47,37 @@
                                     <action selector="bluetoothStatusChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="67a-Ux-qau"/>
                                 </connections>
                             </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jaB-Pk-F71">
+                                <rect key="frame" x="276" y="501" width="51" height="31"/>
+                                <connections>
+                                    <action selector="offlineSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Re-zV-psu"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUT-tJ-qbw">
+                                <rect key="frame" x="251" y="472" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XUT-tJ-qbw" firstAttribute="top" secondItem="VEX-a6-wUU" secondAttribute="bottom" priority="750" constant="50" id="3nf-ea-Uda"/>
                             <constraint firstItem="VEX-a6-wUU" firstAttribute="centerX" secondItem="1W5-6m-qnr" secondAttribute="centerX" id="5kz-az-0iU"/>
+                            <constraint firstAttribute="centerX" secondItem="XUT-tJ-qbw" secondAttribute="centerX" id="7hq-cO-fGL"/>
+                            <constraint firstItem="jaB-Pk-F71" firstAttribute="top" secondItem="XUT-tJ-qbw" secondAttribute="bottom" constant="8" symbolic="YES" id="9vi-oo-P08"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jaB-Pk-F71" secondAttribute="bottom" constant="8" symbolic="YES" id="CyZ-or-gNq"/>
                             <constraint firstItem="1W5-6m-qnr" firstAttribute="centerX" secondItem="Omy-wd-t1z" secondAttribute="centerX" id="GHF-He-aJP"/>
                             <constraint firstAttribute="centerY" secondItem="Omy-wd-t1z" secondAttribute="centerY" id="HwQ-bH-TKM"/>
                             <constraint firstItem="1W5-6m-qnr" firstAttribute="top" secondItem="Omy-wd-t1z" secondAttribute="bottom" constant="50" id="I44-KL-yTT"/>
+                            <constraint firstAttribute="centerX" secondItem="jaB-Pk-F71" secondAttribute="centerX" id="Yos-aM-gVr"/>
                             <constraint firstItem="VEX-a6-wUU" firstAttribute="top" secondItem="1W5-6m-qnr" secondAttribute="bottom" constant="8" symbolic="YES" id="ZhL-bv-eFo"/>
                             <constraint firstAttribute="centerX" secondItem="Omy-wd-t1z" secondAttribute="centerX" id="iu0-gd-7Jz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bluetoothSegmentedControl" destination="VEX-a6-wUU" id="L7z-KL-JJm"/>
+                        <outlet property="offlineSwitch" destination="jaB-Pk-F71" id="reZ-W6-9sA"/>
                         <outlet property="overrideButton" destination="Omy-wd-t1z" id="OkF-TC-Syr"/>
                     </connections>
                 </viewController>

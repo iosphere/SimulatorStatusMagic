@@ -28,6 +28,7 @@
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *overrideButton;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *bluetoothSegmentedControl;
+@property (strong, nonatomic) IBOutlet UISwitch *offlineSwitch;
 @end
 
 @implementation ViewController
@@ -39,9 +40,15 @@
 
   [self setOverrideButtonText];
   [self setBluetoothSegementedControlSelectedSegment];
+  [self setOfflineSwitchState];
 }
 
 #pragma mark Actions
+- (IBAction)offlineSwitchChanged:(UISwitch *)sender
+{
+  [[SDStatusBarManager sharedInstance] setIsOffline:sender.isOn];
+}
+
 - (IBAction)overrideButtonTapped:(UIButton *)sender
 {
   if ([SDStatusBarManager sharedInstance].usingOverrides) {
@@ -73,6 +80,11 @@
 {
   // Note: The order of the segments should match the definition of SDStatusBarManagerBluetoothState
   self.bluetoothSegmentedControl.selectedSegmentIndex = [SDStatusBarManager sharedInstance].bluetoothState;
+}
+
+- (void)setOfflineSwitchState
+{
+  self.offlineSwitch.on = [SDStatusBarManager sharedInstance].isOffline;
 }
 
 #pragma mark Status bar settings
