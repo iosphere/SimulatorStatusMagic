@@ -104,6 +104,7 @@ typedef struct {
 @synthesize bluetoothConnected;
 @synthesize bluetoothEnabled;
 @synthesize offlineString;
+@synthesize watchMode;
 
 - (void)enableOverrides
 {
@@ -142,6 +143,11 @@ typedef struct {
   if (self.bluetoothEnabled) {
     overrides->overrideBluetoothConnected = self.bluetoothConnected;
     overrides->values.bluetoothConnected = self.bluetoothConnected;
+  }
+
+  if (self.watchMode) {
+    overrides->booloverrideItemIsEnabled[9] = 1;
+    overrides->values.boolitemIsEnabled[9] = 1;
   }
   
   // Actually update the status bar

@@ -44,6 +44,35 @@ typedef struct {
 } StatusBarRawData;
 
 typedef struct {
+  /*
+   *  Flags:
+   *  0: unknown; Watch: charging
+   *  1: moon symbol
+   *  2: flight mode
+   *  3: enables signal bars; Watch: no connection to phone
+   *  4: unknown; Watch: charging
+   *  5: unknown; Watch: charging
+   *  6: unknown; Watch: charging
+   *  7: unknown; Watch: charging
+   *  8: battery
+   *  9: Watch: hide charging symbol
+   *  10: external battery level
+   *  11: unknown; Watch: charging
+   *  12: phone icon
+   *  13: alarm active
+   *  14: + symbol
+   *  15: unknown; Watch: charging
+   *  16: location usage
+   *  17: rotation lock
+   *  18: unknown; Watch: charging
+   *  19: AirPlay
+   *  20: microphone
+   *  21: media: play
+   *  22: VPN
+   *  23: phone icon
+   *  24: network indicator
+   *  25: blank square
+   */
   char booloverrideItemIsEnabled[26];
   unsigned int overrideTimeString : 1;
   unsigned int overrideGsmSignalStrengthRaw : 1;
@@ -56,8 +85,8 @@ typedef struct {
   unsigned int overrideWifiSignalStrengthBars : 1;
   unsigned int overrideDataNetworkType : 1;
   unsigned int disallowsCellularDataNetworkTypes : 1;
-  unsigned int overrideBatteryCapacity : 1;
-  unsigned int overrideBatteryState : 1;
+  unsigned int overrideBatteryCapacity : 1; // charging state
+  unsigned int overrideBatteryState : 1; // charging vs. not charging
   unsigned int overrideBatteryDetailString : 1;
   unsigned int overrideBluetoothBatteryCapacity : 1;
   unsigned int overrideThermalColor : 1;
@@ -104,6 +133,7 @@ typedef struct {
 @synthesize bluetoothConnected;
 @synthesize bluetoothEnabled;
 @synthesize offlineString;
+@synthesize watchMode;
 
 - (void)enableOverrides
 {
@@ -112,21 +142,22 @@ typedef struct {
   // Set 9:41 time in current localization
   overrides->overrideTimeString = 1;
   strcpy(overrides->values.timeString, [self.timeString cStringUsingEncoding:NSUTF8StringEncoding]);
-  
   // Enable 5 bars of mobile (iPhone only)
   NSString *carrierText;
   if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
     if (!self.offlineString.length) {
       overrides->booloverrideItemIsEnabled[3] = 1;
       overrides->values.boolitemIsEnabled[3] = 1;
+
       overrides->overrideGsmSignalStrengthBars = 1;
       overrides->values.gsmSignalStrengthBars = 5;
     }
+
     carrierText = self.offlineString;
   } else {
     carrierText = @"iPad";
   }
-  
+
   overrides->overrideServiceString = 1;
   strcpy(overrides->values.serviceString, [carrierText cStringUsingEncoding:NSUTF8StringEncoding]);
   
@@ -143,7 +174,12 @@ typedef struct {
     overrides->overrideBluetoothConnected = self.bluetoothConnected;
     overrides->values.bluetoothConnected = self.bluetoothConnected;
   }
-  
+
+  if (self.watchMode) {
+    overrides->booloverrideItemIsEnabled[9] = 1;
+    overrides->values.boolitemIsEnabled[9] = 1;
+  }
+
   // Actually update the status bar
   [UIStatusBarServer postStatusBarOverrideData:overrides];
   

@@ -16,6 +16,7 @@
 
 @property (assign, nonatomic) BOOL bluetoothEnabled;
 @property (assign, nonatomic) BOOL bluetoothConnected;
+@property (assign, nonatomic) BOOL watchMode;
 
 - (void)enableOverrides;
 - (void)disableOverrides;

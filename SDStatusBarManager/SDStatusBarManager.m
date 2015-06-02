@@ -46,7 +46,10 @@ static NSString * const SDStatusBarManagerWatchModeKey = @"watch_mode";
   self.overrider.timeString = [self localizedTimeString];
   self.overrider.bluetoothEnabled = self.bluetoothState != SDStatusBarManagerBluetoothHidden;
   self.overrider.bluetoothConnected = self.bluetoothState == SDStatusBarManagerBluetoothVisibleConnected;
-  self.overrider.offlineString = self.isOffline ? NSLocalizedString(@"No Service", @"No cellular network") : @"";
+
+  self.overrider.watchMode = self.watchMode;
+  // Watch Mode requires offline mode
+  self.overrider.offlineString = (self.isOffline || self.watchMode) ? NSLocalizedString(@"No Service", @"No cellular network") : @"";
 
   [self.overrider enableOverrides];
 }
@@ -145,6 +148,9 @@ static NSString * const SDStatusBarManagerWatchModeKey = @"watch_mode";
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   formatter.dateStyle = NSDateFormatterNoStyle;
   formatter.timeStyle = NSDateFormatterShortStyle;
+  if (self.watchMode) {
+    formatter.dateFormat = @"hh:mm"; // ignores AM/PM
+  }
 
   NSDateComponents *components = [[NSCalendar currentCalendar] components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:[NSDate date]];
   components.hour = 9;
