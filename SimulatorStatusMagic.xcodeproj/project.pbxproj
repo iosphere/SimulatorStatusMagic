@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		110F24E719E4610E00012FD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 110F24E519E4610E00012FD7 /* Localizable.strings */; };
+		1B19EB661B1DEF2800E9E8AC /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B19EB651B1DEF2800E9E8AC /* InterfaceController.m */; };
+		1B19EB691B1DEF2800E9E8AC /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B19EB681B1DEF2800E9E8AC /* NotificationController.m */; };
+		1B19EB6C1B1DEF2800E9E8AC /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B19EB6B1B1DEF2800E9E8AC /* GlanceController.m */; };
+		1B19EB6E1B1DEF2800E9E8AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B19EB6D1B1DEF2800E9E8AC /* Images.xcassets */; };
+		1B19EB721B1DEF2800E9E8AC /* Magic.app in Resources */ = {isa = PBXBuildFile; fileRef = 1B19EB711B1DEF2800E9E8AC /* Magic.app */; };
+		1B19EB7A1B1DEF2800E9E8AC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B19EB781B1DEF2800E9E8AC /* Interface.storyboard */; };
+		1B19EB7C1B1DEF2800E9E8AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B19EB7B1B1DEF2800E9E8AC /* Images.xcassets */; };
+		1B19EB7F1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1B19EB5F1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		44A44BDE1AD7316A003E04A5 /* SDStatusBarOverriderPost8_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A44BDD1AD7316A003E04A5 /* SDStatusBarOverriderPost8_3.m */; };
 		44A44BE21AD735E2003E04A5 /* SDStatusBarOverriderPre8_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A44BE11AD735E2003E04A5 /* SDStatusBarOverriderPre8_3.m */; };
 		5516356E19E3FF3D001F636D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5516356D19E3FF3D001F636D /* main.m */; };
@@ -19,10 +27,55 @@
 		DDACF30B19E83F06004FCB30 /* SDStatusBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDACF30A19E83F06004FCB30 /* SDStatusBarManager.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1B19EB731B1DEF2800E9E8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5516356019E3FF3D001F636D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B19EB701B1DEF2800E9E8AC;
+			remoteInfo = "SimulatorStatusMagic WatchKit App";
+		};
+		1B19EB7D1B1DEF2800E9E8AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5516356019E3FF3D001F636D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B19EB5E1B1DEF2800E9E8AC;
+			remoteInfo = "SimulatorStatusMagic WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B19EB861B1DEF2800E9E8AC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1B19EB7F1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		110F24E319E45FFE00012FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		110F24E419E45FFE00012FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		110F24E619E4610E00012FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1B19EB5F1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SimulatorStatusMagic WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B19EB621B1DEF2800E9E8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B19EB631B1DEF2800E9E8AC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		1B19EB641B1DEF2800E9E8AC /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		1B19EB651B1DEF2800E9E8AC /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		1B19EB671B1DEF2800E9E8AC /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		1B19EB681B1DEF2800E9E8AC /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		1B19EB6A1B1DEF2800E9E8AC /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		1B19EB6B1B1DEF2800E9E8AC /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		1B19EB6D1B1DEF2800E9E8AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1B19EB711B1DEF2800E9E8AC /* Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B19EB771B1DEF2800E9E8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B19EB791B1DEF2800E9E8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1B19EB7B1B1DEF2800E9E8AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1BFB7F301AE6946400E80A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1BFB7F311AE694AB00E80A60 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		44A44BDC1AD7316A003E04A5 /* SDStatusBarOverriderPost8_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatusBarOverriderPost8_3.h; sourceTree = "<group>"; };
@@ -45,6 +98,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B19EB5C1B1DEF2800E9E8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5516356519E3FF3D001F636D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,11 +115,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B19EB601B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1B19EB641B1DEF2800E9E8AC /* InterfaceController.h */,
+				1B19EB651B1DEF2800E9E8AC /* InterfaceController.m */,
+				1B19EB671B1DEF2800E9E8AC /* NotificationController.h */,
+				1B19EB681B1DEF2800E9E8AC /* NotificationController.m */,
+				1B19EB6A1B1DEF2800E9E8AC /* GlanceController.h */,
+				1B19EB6B1B1DEF2800E9E8AC /* GlanceController.m */,
+				1B19EB6D1B1DEF2800E9E8AC /* Images.xcassets */,
+				1B19EB611B1DEF2800E9E8AC /* Supporting Files */,
+			);
+			path = "SimulatorStatusMagic WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		1B19EB611B1DEF2800E9E8AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B19EB621B1DEF2800E9E8AC /* Info.plist */,
+				1B19EB631B1DEF2800E9E8AC /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B19EB751B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				1B19EB781B1DEF2800E9E8AC /* Interface.storyboard */,
+				1B19EB7B1B1DEF2800E9E8AC /* Images.xcassets */,
+				1B19EB761B1DEF2800E9E8AC /* Supporting Files */,
+			);
+			path = "SimulatorStatusMagic WatchKit App";
+			sourceTree = "<group>";
+		};
+		1B19EB761B1DEF2800E9E8AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B19EB771B1DEF2800E9E8AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5516355F19E3FF3D001F636D = {
 			isa = PBXGroup;
 			children = (
 				5516356A19E3FF3D001F636D /* SimulatorStatusMagic */,
 				DDACF30819E83F06004FCB30 /* SDStatusBarManager */,
+				1B19EB601B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension */,
+				1B19EB751B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit App */,
 				5516356919E3FF3D001F636D /* Products */,
 			);
 			indentWidth = 2;
@@ -70,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				5516356819E3FF3D001F636D /* SimulatorStatusMagic.app */,
+				1B19EB5F1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension.appex */,
+				1B19EB711B1DEF2800E9E8AC /* Magic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +230,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1B19EB5E1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B19EB851B1DEF2800E9E8AC /* Build configuration list for PBXNativeTarget "SimulatorStatusMagic WatchKit Extension" */;
+			buildPhases = (
+				1B19EB5B1B1DEF2800E9E8AC /* Sources */,
+				1B19EB5C1B1DEF2800E9E8AC /* Frameworks */,
+				1B19EB5D1B1DEF2800E9E8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B19EB741B1DEF2800E9E8AC /* PBXTargetDependency */,
+			);
+			name = "SimulatorStatusMagic WatchKit Extension";
+			productName = "SimulatorStatusMagic WatchKit Extension";
+			productReference = 1B19EB5F1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		1B19EB701B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B19EB841B1DEF2800E9E8AC /* Build configuration list for PBXNativeTarget "SimulatorStatusMagic WatchKit App" */;
+			buildPhases = (
+				1B19EB6F1B1DEF2800E9E8AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SimulatorStatusMagic WatchKit App";
+			productName = "SimulatorStatusMagic WatchKit App";
+			productReference = 1B19EB711B1DEF2800E9E8AC /* Magic.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		5516356719E3FF3D001F636D /* SimulatorStatusMagic */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5516358B19E3FF3D001F636D /* Build configuration list for PBXNativeTarget "SimulatorStatusMagic" */;
@@ -131,10 +270,12 @@
 				5516356419E3FF3D001F636D /* Sources */,
 				5516356519E3FF3D001F636D /* Frameworks */,
 				5516356619E3FF3D001F636D /* Resources */,
+				1B19EB861B1DEF2800E9E8AC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1B19EB7E1B1DEF2800E9E8AC /* PBXTargetDependency */,
 			);
 			name = SimulatorStatusMagic;
 			productName = SimulatorStatusMagic;
@@ -150,6 +291,12 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Shiny Development";
 				TargetAttributes = {
+					1B19EB5E1B1DEF2800E9E8AC = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					1B19EB701B1DEF2800E9E8AC = {
+						CreatedOnToolsVersion = 6.4;
+					};
 					5516356719E3FF3D001F636D = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
@@ -171,11 +318,31 @@
 			projectRoot = "";
 			targets = (
 				5516356719E3FF3D001F636D /* SimulatorStatusMagic */,
+				1B19EB5E1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension */,
+				1B19EB701B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B19EB5D1B1DEF2800E9E8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B19EB6E1B1DEF2800E9E8AC /* Images.xcassets in Resources */,
+				1B19EB721B1DEF2800E9E8AC /* Magic.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B19EB6F1B1DEF2800E9E8AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B19EB7A1B1DEF2800E9E8AC /* Interface.storyboard in Resources */,
+				1B19EB7C1B1DEF2800E9E8AC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5516356619E3FF3D001F636D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +357,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B19EB5B1B1DEF2800E9E8AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B19EB691B1DEF2800E9E8AC /* NotificationController.m in Sources */,
+				1B19EB661B1DEF2800E9E8AC /* InterfaceController.m in Sources */,
+				1B19EB6C1B1DEF2800E9E8AC /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5516356419E3FF3D001F636D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +382,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1B19EB741B1DEF2800E9E8AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B19EB701B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit App */;
+			targetProxy = 1B19EB731B1DEF2800E9E8AC /* PBXContainerItemProxy */;
+		};
+		1B19EB7E1B1DEF2800E9E8AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B19EB5E1B1DEF2800E9E8AC /* SimulatorStatusMagic WatchKit Extension */;
+			targetProxy = 1B19EB7D1B1DEF2800E9E8AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		110F24E519E4610E00012FD7 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -214,6 +404,14 @@
 				1BFB7F311AE694AB00E80A60 /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1B19EB781B1DEF2800E9E8AC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B19EB791B1DEF2800E9E8AC /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		5516357519E3FF3D001F636D /* Main.storyboard */ = {
@@ -237,6 +435,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1B19EB801B1DEF2800E9E8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SimulatorStatusMagic WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1B19EB811B1DEF2800E9E8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SimulatorStatusMagic WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1B19EB821B1DEF2800E9E8AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = SimulatorStatusMagic_WatchKit_Extension;
+				INFOPLIST_FILE = "SimulatorStatusMagic WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = Magic;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		1B19EB831B1DEF2800E9E8AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SimulatorStatusMagic_WatchKit_Extension;
+				INFOPLIST_FILE = "SimulatorStatusMagic WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = Magic;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		5516358919E3FF3D001F636D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -340,6 +606,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B19EB841B1DEF2800E9E8AC /* Build configuration list for PBXNativeTarget "SimulatorStatusMagic WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B19EB821B1DEF2800E9E8AC /* Debug */,
+				1B19EB831B1DEF2800E9E8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1B19EB851B1DEF2800E9E8AC /* Build configuration list for PBXNativeTarget "SimulatorStatusMagic WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B19EB801B1DEF2800E9E8AC /* Debug */,
+				1B19EB811B1DEF2800E9E8AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		5516356319E3FF3D001F636D /* Build configuration list for PBXProject "SimulatorStatusMagic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
