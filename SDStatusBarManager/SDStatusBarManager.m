@@ -30,6 +30,7 @@
 static NSString * const SDStatusBarManagerUsingOverridesKey = @"using_overrides";
 static NSString * const SDStatusBarManagerBluetoothStateKey = @"bluetooth_state";
 static NSString * const SDStatusBarManagerOfflineStateKey = @"offline_state";
+static NSString * const SDStatusBarManagerWatchModeKey = @"watch_mode";
 
 @interface SDStatusBarManager ()
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
@@ -82,6 +83,22 @@ static NSString * const SDStatusBarManagerOfflineStateKey = @"offline_state";
 
 - (BOOL)isOffline {
   return [self.userDefaults boolForKey:SDStatusBarManagerOfflineStateKey];
+}
+
+- (void)setWatchMode:(BOOL)watchModeActive
+{
+  if (self.watchMode == watchModeActive) return;
+
+  [self.userDefaults setBool:watchModeActive forKey:SDStatusBarManagerWatchModeKey];
+
+  if (self.usingOverrides) {
+    // Refresh the active status bar
+    [self enableOverrides];
+  }
+}
+
+- (BOOL)watchMode {
+  return [self.userDefaults boolForKey:SDStatusBarManagerWatchModeKey];
 }
 
 - (void)setBluetoothState:(SDStatusBarManagerBluetoothState)bluetoothState
