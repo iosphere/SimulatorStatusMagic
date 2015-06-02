@@ -29,6 +29,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *overrideButton;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *bluetoothSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISwitch *offlineSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *watchSwitch;
 @end
 
 @implementation ViewController
@@ -41,12 +42,18 @@
   [self setOverrideButtonText];
   [self setBluetoothSegementedControlSelectedSegment];
   [self setOfflineSwitchState];
+  [self setWatchSwitchState];
 }
 
 #pragma mark Actions
 - (IBAction)offlineSwitchChanged:(UISwitch *)sender
 {
   [[SDStatusBarManager sharedInstance] setIsOffline:sender.isOn];
+}
+
+- (IBAction)watchSwitchChanged:(UISwitch *)sender
+{
+  [[SDStatusBarManager sharedInstance] setWatchMode:sender.isOn];
 }
 
 - (IBAction)overrideButtonTapped:(UIButton *)sender
@@ -85,6 +92,11 @@
 - (void)setOfflineSwitchState
 {
   self.offlineSwitch.on = [SDStatusBarManager sharedInstance].isOffline;
+}
+
+- (void)setWatchSwitchState
+{
+  self.watchSwitch.on = [SDStatusBarManager sharedInstance].watchMode;
 }
 
 #pragma mark Status bar settings

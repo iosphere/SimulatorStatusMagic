@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, SDStatusBarManagerBluetoothState)
 @property (assign, nonatomic, readonly) BOOL usingOverrides;
 @property (assign, nonatomic) SDStatusBarManagerBluetoothState bluetoothState;
 @property (assign, nonatomic) BOOL isOffline;
+@property (assign, nonatomic) BOOL watchMode;
 
 - (void)enableOverrides;
 - (void)disableOverrides;

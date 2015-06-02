@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7703" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
@@ -48,13 +48,25 @@
                                 </connections>
                             </segmentedControl>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jaB-Pk-F71">
-                                <rect key="frame" x="276" y="501" width="51" height="31"/>
+                                <rect key="frame" x="276" y="432" width="51" height="31"/>
                                 <connections>
                                     <action selector="offlineSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Re-zV-psu"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUT-tJ-qbw">
-                                <rect key="frame" x="251" y="472" width="98" height="21"/>
+                                <rect key="frame" x="345" y="437" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qU7-y1-R0M">
+                                <rect key="frame" x="276" y="473" width="51" height="31"/>
+                                <connections>
+                                    <action selector="watchSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="W97-zt-U7U"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6b-t9-YKI">
+                                <rect key="frame" x="345" y="478" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,27 +74,41 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XUT-tJ-qbw" firstAttribute="top" secondItem="VEX-a6-wUU" secondAttribute="bottom" priority="750" constant="50" id="3nf-ea-Uda"/>
                             <constraint firstItem="VEX-a6-wUU" firstAttribute="centerX" secondItem="1W5-6m-qnr" secondAttribute="centerX" id="5kz-az-0iU"/>
                             <constraint firstAttribute="centerX" secondItem="XUT-tJ-qbw" secondAttribute="centerX" id="7hq-cO-fGL"/>
                             <constraint firstItem="jaB-Pk-F71" firstAttribute="top" secondItem="XUT-tJ-qbw" secondAttribute="bottom" constant="8" symbolic="YES" id="9vi-oo-P08"/>
+                            <constraint firstItem="jaB-Pk-F71" firstAttribute="top" secondItem="VEX-a6-wUU" secondAttribute="bottom" constant="10" id="9xf-6t-OJt"/>
+                            <constraint firstAttribute="centerX" secondItem="qU7-y1-R0M" secondAttribute="centerX" constant="-0.5" id="ASg-6H-ZfB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jaB-Pk-F71" secondAttribute="bottom" constant="8" symbolic="YES" id="CyZ-or-gNq"/>
                             <constraint firstItem="1W5-6m-qnr" firstAttribute="centerX" secondItem="Omy-wd-t1z" secondAttribute="centerX" id="GHF-He-aJP"/>
                             <constraint firstAttribute="centerY" secondItem="Omy-wd-t1z" secondAttribute="centerY" id="HwQ-bH-TKM"/>
                             <constraint firstItem="1W5-6m-qnr" firstAttribute="top" secondItem="Omy-wd-t1z" secondAttribute="bottom" constant="50" id="I44-KL-yTT"/>
+                            <constraint firstItem="m6b-t9-YKI" firstAttribute="centerY" secondItem="qU7-y1-R0M" secondAttribute="centerY" id="PzT-uo-LJy"/>
                             <constraint firstAttribute="centerX" secondItem="jaB-Pk-F71" secondAttribute="centerX" id="Yos-aM-gVr"/>
+                            <constraint firstItem="jaB-Pk-F71" firstAttribute="centerY" secondItem="XUT-tJ-qbw" secondAttribute="centerY" id="Z1h-aC-sMu"/>
                             <constraint firstItem="VEX-a6-wUU" firstAttribute="top" secondItem="1W5-6m-qnr" secondAttribute="bottom" constant="8" symbolic="YES" id="ZhL-bv-eFo"/>
+                            <constraint firstItem="m6b-t9-YKI" firstAttribute="leading" secondItem="qU7-y1-R0M" secondAttribute="trailing" constant="20" id="awh-PC-eA4"/>
                             <constraint firstAttribute="centerX" secondItem="Omy-wd-t1z" secondAttribute="centerX" id="iu0-gd-7Jz"/>
+                            <constraint firstItem="qU7-y1-R0M" firstAttribute="top" secondItem="jaB-Pk-F71" secondAttribute="bottom" constant="10" id="lrb-6O-yq8"/>
+                            <constraint firstItem="XUT-tJ-qbw" firstAttribute="leading" secondItem="jaB-Pk-F71" secondAttribute="trailing" constant="20" id="rzk-o5-JDl"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9vi-oo-P08"/>
+                                <exclude reference="7hq-cO-fGL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bluetoothSegmentedControl" destination="VEX-a6-wUU" id="L7z-KL-JJm"/>
                         <outlet property="offlineSwitch" destination="jaB-Pk-F71" id="reZ-W6-9sA"/>
                         <outlet property="overrideButton" destination="Omy-wd-t1z" id="OkF-TC-Syr"/>
+                        <outlet property="watchSwitch" destination="qU7-y1-R0M" id="kK7-gG-dY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="318" y="474"/>
         </scene>
     </scenes>
 </document>

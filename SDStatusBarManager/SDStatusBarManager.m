@@ -132,6 +132,10 @@ static NSString * const SDStatusBarManagerOfflineStateKey = @"offline_state";
   NSDateComponents *components = [[NSCalendar currentCalendar] components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:[NSDate date]];
   components.hour = 9;
   components.minute = 41;
+  if (self.watchMode) {
+    components.hour = 10;
+    components.minute = 9;
+  }
 
   return [formatter stringFromDate:[[NSCalendar currentCalendar] dateFromComponents:components]];
 }
