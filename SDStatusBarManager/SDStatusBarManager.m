@@ -148,9 +148,6 @@ static NSString * const SDStatusBarManagerWatchModeKey = @"watch_mode";
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   formatter.dateStyle = NSDateFormatterNoStyle;
   formatter.timeStyle = NSDateFormatterShortStyle;
-  if (self.watchMode) {
-    formatter.dateFormat = @"hh:mm"; // ignores AM/PM
-  }
 
   NSDateComponents *components = [[NSCalendar currentCalendar] components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:[NSDate date]];
   components.hour = 9;
